@@ -2,6 +2,7 @@
 ## api for adding activity
 
 # all api calls require a user to be specified
+# can call locally like this: curl --data 'my update to you' "localhost:9393/api/doing?user=bob@gmail.com"
 before '/api/*' do
   halt 400, "Invalid request" unless params[:user]
 end

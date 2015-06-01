@@ -1,7 +1,25 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $('.goal-done').click(function(){
+    $('#today-goals').append($(this).parent().children().first().text() + '\n');
+    $(this).parent().remove();
+    return false;
+  });
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $('.goal-tomorrow').click(function(){
+    $('#tomorrow-goals').append($(this).parent().children().first().text() + '\n');
+    $(this).parent().remove();
+    return false;
+  });
+
+  $('.still-blocker').click(function(){
+    $('#blockers').append($(this).parent().children().first().text() + '\n');
+    $(this).parent().remove();
+    return false;
+  });
+
+  $('.blocker-done').click(function(){
+    $('#activities').append('B' + $(this).parent().children().first().text() + '\n');
+    $(this).parent().remove();
+    return false;
+  });
 });

@@ -1,56 +1,74 @@
-<div class="alert alert-success" role="alert">
-  <strong>Hello <%= current_user %>!</strong> This is week 42 and today is Friday.
-</div>
-
-<div class="form-group">
-  <label for="week-goals">Goals for this week</label>
-  <textarea id="week-goals" class="form-control" rows="3">
-- Basic functioning app to show at Friday meeting
-  </textarea>
-</div>
-
-<div class="row">
-  <div class="col-md-6">
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Goals for this week</h3>
+  </div>
+  <div class="panel-body">
     <div class="form-group">
-      <label for="today-goals">What did I get done today?</label>
-      <textarea id="today-goals" class="form-control" rows="3">
-- Basic functionality of hello world app
-- Copy data dump from Acxiom to PCI server
-      </textarea>
+      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> <label for="week-goals">These are the things I wanted to get done this week</label>
+      <textarea id="week-goals" class="form-control" rows="3">
+123 - Basic functioning app to show at Friday meeting
+</textarea>
     </div>
   </div>
-  <div class="col-md-6">
-    <div class="form-group">
-        <label for="today-goals">What did I plan to do today?</label>
-        <textarea id="today-goals" class="form-control" rows="3">
-- Basic functionality of hello world app
-- Copy data dump from Acxiom to PCI server
-        </textarea>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">What happened today?</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <span class="glyphicon glyphicon-bell" aria-hidden="true"></span> <label>I reported these blockers...</label>
+        <ul>
+          <li><span>111 - Obtain java code for automated process</span> (<a class="still-blocker" href="#">still blocker</a>&nbsp;|&nbsp;<a class="blocker-done" href="#">done</a>)</li>
+          <li><span>156 - Obtain java code for automated process</span> (<a class="still-blocker" href="#">still blocker</a>&nbsp;|&nbsp;<a class="blocker-done" href="#">done</a>)</li>
+          <li><span>897 - Obtain java code for automated process</span> (<a class="still-blocker" href="#">still blocker</a>&nbsp;|&nbsp;<a class="blocker-done" href="#">done</a>)</li>
+        </ul>
       </div>
+      <div class="col-md-6">
+        <div class="form-group">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>  <label>I planned to get these things done today...</label>
+            <ul>
+              <li><span>231 - Basic functionality of hello world app</span> (<a class="goal-done" href="#">done</a>&nbsp;|&nbsp;<a class="goal-tomorrow" href="#">tomorrow</a>)</li>
+              <li><span>423 - Basic functionality of hello world app</span> (<a class="goal-done" href="#">done</a>&nbsp;|&nbsp;<a class="goal-tomorrow" href="#">tomorrow</a>)</li>
+              <li><span>456 - Basic functionality of hello world app</span> (<a class="goal-done" href="#">done</a>&nbsp;|&nbsp;<a class="goal-tomorrow" href="#">tomorrow</a>)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> <label for="today-goals">My high level accomplishments today (add any missing items)...</label>
+        <textarea id="today-goals" class="form-control" rows="3"></textarea>
+      </div>
+
+      <div class="form-group">
+        <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> <label for="activities">Here's HOW I spent my time today...</label>
+        <textarea id="activities" class="form-control" rows="6">
+678 - Hey 1 (1 hour)
+345 - Hey 2 (20 minutes)
+123 - Blocker Completed: Get access to Dev/Staging environment from DevOps team
+</textarea>
+      </div>
+
     </div>
   </div>
 </div>
 
-<div class="form-group">
-  <label for="blockers">What am I doing tomorrow?</label>
-  <textarea id="blockers" class="form-control" rows="3">
-- Obtain java code for automated process (2 days ago, pings: 1 day ago, 45 minutes ago, 15 minutes ago)
-- Access to NDC PCI environment (1 week ago, pings: 2 days ago, 1 day ago, 10 hours ago, 5 minutes ago)
-  </textarea>
-</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">What should happen tomorrow?</h3>
+  </div>
+  <div class="panel-body">
+    <div class="form-group">
+      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> <label for="blockers">My goals for tomorrow...</label>
+      <textarea id="tomorrow-goals" class="form-control" rows="3"></textarea>
+    </div>
 
-<div class="form-group">
-  <label for="blockers">Is anything blocking me?</label>
-  <textarea id="blockers" class="form-control" rows="3">
-- Obtain java code for automated process (2 days ago, pings: 1 day ago, 45 minutes ago, 15 minutes ago)
-- Access to NDC PCI environment (1 week ago, pings: 2 days ago, 1 day ago, 10 hours ago, 5 minutes ago)
-  </textarea>
-</div>
-
-<div class="form-group">
-  <label for="activity-feed">Here's what I did today</label>
-  <textarea id="activity-feed" class="form-control" rows="6">
-- Hey 1 (1 hour)
-- Hey 2 (20 minutes)
-  </textarea>
+    <div class="form-group">
+      <span class="glyphicon glyphicon-bell" aria-hidden="true"></span> <label for="blockers">Is anything blocking me?</label>
+      <textarea id="blockers" class="form-control" rows="3"></textarea>
+    </div> 
+  </div>
 </div>

@@ -108,6 +108,15 @@ namespace :db do
     end
   end
 
+  desc "Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)."
+  task :rollback do
+    ActiveRecord::Migrator.migrations_paths << File.dirname(__FILE__) + 'db/migrate'
+    ActiveRecord::Migration.verbose = ENV["VERBOSE"] ? ENV["VERBOSE"] == "true" : true
+    ActiveRecord::Migrator.rollback(ActiveRecord::Migrator.migrations_paths, 1) do |migration|
+      ENV["SCOPE"].blank? || (ENV["SCOPE"] == migration.scope)
+    end
+  end
+
   desc "Populate the database with dummy data by running db/seeds.rb"
   task :seed do
     require APP_ROOT.join('db', 'seeds.rb')
