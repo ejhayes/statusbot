@@ -22,6 +22,7 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
   gem 'rack-test'
   gem 'rspec'
   gem 'capybara'

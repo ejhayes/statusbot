@@ -1,30 +1,33 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+# statusbot
 
-### Purpose
-The Sinatra Skeleton:
+## motivation - what's this for?
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+This is my activity tracking tool.  The idea is pretty straightforward:
 
-### Quickstart
+- Once a week, sit down and identify your goals for the week.  Weeks go by so quickly and it is really easy to be aimless.
+- At the end of each day, sit down and identify your specific goals for the next day.  This allows you to plan things out when your mind is still fresh from the current day.  It also allows you to figure out how you can implement your overarching weekly goal into an action plan for a specific day.  It also shows you where your time goes during the day.
+- At the end of the week, review the week summary and plan for the next week.
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+I used this strategy a long time ago and found that it worked really well for me.  In the past I had a very manual system though...so I thought it would be fun to build the core functionality into a chat bot that I can talk to during the day.  For the planning and reporting, I'd just go to a web interface, login, and see all my chat updates.
 
-As needed, create models & migrations with the `rake` tasks:
+## local development environment - how do I run this thing?
 
-```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
+To get started:
 
-### Contributing
+    git clone <this repo>
+    cd <this repo>
+    bundle
+    bundle exec shotgun config.ru
 
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
+To run tests:
 
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
+    bundle exec rspec
 
-Be prepared to give and receive specific, actionable, and kind feedback!
+To run database migrations (specify whatever environment you want):
+
+    RACK_ENV=development bundle exec rake db:create
+    RACK_ENV=development bundle exec rake db:migrate
+
+## contribute?
+
+We're all bound write lousy code, miss a unit test, or leave out some killer feature.  If you want to contribute just fork this repo, make changes, and submit a pull request.

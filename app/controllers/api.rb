@@ -1,45 +1,45 @@
+# api related logic
+module Api
 
-## api for adding activity
+  def self.add_activity(user, description)
+    return "was called with #{arg1}"
+  end
 
-# all api calls require a user to be specified
-# can call locally like this: curl --data 'my update to you' "localhost:9393/api/doing?user=bob@gmail.com"
-before '/api/*' do
-  halt 400, "Invalid request" unless params[:user]
+  def self.stop_activity(user)
+
+  end
+
+  def self.add_wait(user, description)
+
+  end
+
+  def self.wait_ping(user, wait_id, description)
+
+  end
+
+  def self.stop(user)
+
+  end
+
+  def self.wait_done(user, wait_id)
+
+  end
+
+  def self.wait_cancel(user, wait_id)
+
+  end
+
+  def self.done(user)
+
+  end
+
+  def self.goals(user)
+
+  end
+
+  def self.waits(user)
+
+  end
+
 end
 
-post '/api/doing' do
-  
-  # request body will have the doing activity
-  "#{request.body.read}"
-
-end
-
-get '/api/stop' do
-
-end
-
-get '/api/wait' do
-
-end
-
-get '/api/wait/ping' do
-
-end
-
-get '/api/wait/done' do
-
-end
-
-get '/api/wait/cancel' do
-
-end
-
-## api for getting information back
-
-get '/api/goals' do
-
-end
-
-get '/api/waits' do
-
-end
